@@ -1,0 +1,68 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+新機能と改善のために最新の PowerShell をインストールしてください!https://aka.ms/PSWindows
+
+PS C:\Users\user1> cd Desktop
+PS C:\Users\user1\Desktop> cd new
+PS C:\Users\user1\Desktop\new> sqlldr DAIDO/DAIDO@orcl CONTROL=classmate3.ctl LOG=classmate.log BAD=classmate.bad
+
+SQL*Loader: Release 21.0.0.0.0 - Production on 火 12月 19 18:10:05 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
+
+SQL*Loader-704: 内部エラー: ulconnect: OCIServerAttach [0]
+ORA-12154: TNS: 指定された接続識別子を解決できませんでした
+PS C:\Users\user1\Desktop\new> tnsping orcl
+
+TNS Ping Utility for 64-bit Windows: Version 21.0.0.0.0 - Production on 19-12月-2023 18:17:07
+
+Copyright (c) 1997, 2021, Oracle.  All rights reserved.
+
+パラメータ・ファイルを使用しました:
+C:\app\client\user1\product\21.0.0\client_1\network\admin\sqlnet.ora
+
+
+エイリアスを解決するためにTNSNAMESアダプタを使用しました。
+(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = srvbiorcl)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORCL)))に接続の試行中
+TNS-12545: 接続に失敗しました。ターゲット・ホストまたはオブジェクトが存在しません。
+PS C:\Users\user1\Desktop\new> tnsping orcl
+
+TNS Ping Utility for 64-bit Windows: Version 21.0.0.0.0 - Production on 19-12月-2023 18:17:46
+
+Copyright (c) 1997, 2021, Oracle.  All rights reserved.
+
+パラメータ・ファイルを使用しました:
+C:\app\client\user1\product\21.0.0\client_1\network\admin\sqlnet.ora
+
+
+エイリアスを解決するためにTNSNAMESアダプタを使用しました。
+(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = srvbioracle)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = ORCL)))に接続の試行中
+OK (70ミリ秒)
+PS C:\Users\user1\Desktop\new> sqlldr DAIDO/DAIDO@orcl CONTROL=classmate3.ctl LOG=classmate.log BAD=classmate.bad
+
+SQL*Loader: Release 21.0.0.0.0 - Production on 火 12月 19 18:18:09 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle and/or its affiliates.  All rights reserved.
+
+SQL*Loader-500: ファイル(D:\User\user1\Desktop\new\classmate.csv)をオープンできません
+SQL*Loader-553: ファイルが見つかりません。
+SQL*Loader-509: システム・エラー: 指定されたファイルが見つかりません。
+PS C:\Users\user1\Desktop\new> sqlplus DAIDO/DAIDO@orcl
+
+SQL*Plus: Release 21.0.0.0.0 - Production on 火 12月 19 18:19:02 2023
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+
+
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+に接続されました。
+SQL> exit
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing optionsとの接続が切断されました。
+PS C:\Users\user1\Desktop\new>

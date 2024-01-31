@@ -1,0 +1,15 @@
+LOAD DATA CHARACTERSET JA16SJISTILDE
+INFILE * "str '\n'"
+INTO TABLE "DAIDO"."SOF-SBU明細-mizukitest4"
+FIELDS TERMINATED BY ','
+TRAILING NULLCOLS
+(
+  "名前",
+  "年間計画",
+  "下見直し",
+  "前月見込",
+  "当月見込"
+)
+BEGINDATA
+たかし,472,106,337,288
+はなこ,152.263,455.2,652,401,
